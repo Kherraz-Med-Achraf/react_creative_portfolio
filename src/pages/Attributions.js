@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useEffect} from "react";
-import GlobalStyle from "../GlobalStyle";
+
 import cursorUpdate from "../components/CursorUpdate";
 import {
   AttributionsContainerStyle,
@@ -19,7 +19,7 @@ import {
 } from "../components/AnimationsFramerMotion";
 import {motion, useAnimation} from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import * as LottiePlayer from "@lottiefiles/lottie-player";
+
 import HTML from "../Assets/html-5.png";
 import CSS from "../Assets/css.png";
 import JAVASCRIPT from "../Assets/javascript.png";
@@ -207,7 +207,7 @@ function Attributions(props) {
                                 speed="0.5"
                                 intermission="0"
                             ></lottie-player>
-                            <a href="https://lottiefiles.com/m77ckaayr6" title="GitHub icon" target='_blank' target='_blank' rel="noreferrer">Animation créée par Zoran Otrupcak</a>
+                            <a href="https://lottiefiles.com/m77ckaayr6" title="GitHub icon" target='_blank' rel="noreferrer">Animation créée par Zoran Otrupcak</a>
                         </AttributionStyle>
                         <AttributionStyle variants={AttributionAnimation} initial='hidden' animate='show' exit='exit'>
                             <img src={HTML} alt="HTMLLogo"/>

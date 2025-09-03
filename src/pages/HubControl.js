@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {motion, useAnimation} from "framer-motion";
-import GlobalStyle from "../GlobalStyle";
+
 import cursorUpdate from "../components/CursorUpdate";
 import {
   HubControlPageAnimation,
@@ -14,14 +14,13 @@ import {
   SocialBarAnimation,
   LinkedInSocialIconsAnimation,
   GithHubSocialIconsAnimation,
-  InstagramSocialIconsAnimation,
   FacebookSocialIconsAnimation
 } from "../components/AnimationsFramerMotion";
 import {HubControlPageStyle, LogoStyle, HubControlStyle, BottomNavStyle, HorizontalNavStyle, SocialBarStyle} from "../components/Style";
 import KMA from '../KMA.png'
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux";
-import * as LottiePlayer from "@lottiefiles/lottie-player";
+
 import {useNavigate,} from 'react-router-dom'
 import CursorEffect from "../components/CursorEffect";
 
@@ -48,7 +47,6 @@ function HubControl(props) {
     const HorizontalRightNavAnimationControl = useAnimation()
     const LinkedInSocialIconsAnimationControl = useAnimation()
     const GithHubSocialIconsAnimationControl = useAnimation()
-    const InstagramSocialIconsAnimationControl = useAnimation()
     const FacebookSocialIconsAnimationControl = useAnimation()
     const LogoAnimationControl = useAnimation()
 
@@ -79,7 +77,6 @@ function HubControl(props) {
                 HoverMiddleAnimationControl.start('show')
                 LinkedInSocialIconsAnimationControl.start('show')
                 GithHubSocialIconsAnimationControl.start('show')
-                InstagramSocialIconsAnimationControl.start('show')
                 FacebookSocialIconsAnimationControl.start('show')
                 BottomNavAnimationControl.start('show')
                 HorizontalRightNavAnimationControl.start('rotation')
@@ -254,40 +251,6 @@ function HubControl(props) {
                                 loop
                                 mode="normal"
                                 src="https://assets7.lottiefiles.com/private_files/lf30_1ldonjtk.json"
-                                style={{height: "6vh", width: "6vh"}}
-                                speed="0.3"
-                                intermission="0"
-                            ></lottie-player>
-                        </motion.div>
-                    </motion.div>
-                    <motion.div
-                        className="socialIcon"
-                        onHoverStart={e => {
-                            InstagramSocialIconsAnimationControl.start('hoverIn');
-                            const mouseCursor = document.querySelector('#cursor');
-                            mouseCursor.classList.add('instagram-grow')
-                            const socialIcons = document.querySelectorAll('.socialIcon')
-                            socialIcons.forEach((socialIcon)=>{
-                                socialIcon.style.overflow = 'visible';
-                            })
-
-                        }}
-                        onHoverEnd={e => {
-                            InstagramSocialIconsAnimationControl.start('hoverOut');
-                            const mouseCursor = document.querySelector('#cursor')
-                            mouseCursor.classList.remove('instagram-grow')
-                        }}
-                        onClick={()=>{
-                            window.open('https://www.instagram.com/ash_elpsycongroo', '_blank', 'noopener,noreferrer')
-                        }}
-                    >
-                        <motion.div variants={InstagramSocialIconsAnimation} initial='hidden' animate={InstagramSocialIconsAnimationControl}>
-                            <lottie-player
-                                class="lottiSocialIcon"
-                                id="instagram"
-                                loop
-                                mode="normal"
-                                src="https://assets10.lottiefiles.com/packages/lf20_3s913D.json"
                                 style={{height: "6vh", width: "6vh"}}
                                 speed="0.3"
                                 intermission="0"

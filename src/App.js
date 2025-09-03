@@ -8,7 +8,6 @@ import MySkills from "./pages/MySkills";
 import MyWork from "./pages/MyWork";
 import Attributions from "./pages/Attributions";
 import {AnimatePresence} from "framer-motion";
-import CursorEffect from "./components/CursorEffect";
 
 
 function App() {

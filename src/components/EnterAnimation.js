@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { EnterAnimationStyle } from "./Style";
 import Typewriter from "typewriter-effect";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ function EnterAnimation(props) {
     if (next === true) {
       goTo();
     }
-  }, [next]);
+  }, [next, nav]);
 
   const dispatch = useDispatch();
 

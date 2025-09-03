@@ -7,9 +7,9 @@ import {
   CubeNavHover,
   CubeNav,
 } from "../components/Style";
-import {Projects} from "../components/ProjectsData";
+import {Projects} from "../ProjectsData";
 import {useEffect} from "react";
-import GlobalStyle from "../GlobalStyle";
+
 import cursorUpdate from "../components/CursorUpdate";
 import { v4 as uuidv4 } from 'uuid';
 import VanillaTilt from 'vanilla-tilt';
@@ -20,7 +20,7 @@ import {
   CubeNavAnimation,
   HoverCubeNavAnimation
 } from "../components/AnimationsFramerMotion";
-import {motion, useAnimation} from "framer-motion";
+import {useAnimation} from "framer-motion";
 import {useNavigate} from "react-router-dom";
 import CursorEffect from "../components/CursorEffect";
 
@@ -117,24 +117,28 @@ function MyWork(props) {
                                 duration: 0.5,
                             }}}
                         >
-                            <img src={project.frontIMG} alt="frontImageOfProjet"/>
-                            <h2>{project.title}</h2>
-                            <p>{project.description}</p>
-                            <h3>Technical environment</h3>
-                            <div className='Tech'>
-                                {project.techs.map(tech => {
-                                    return (
-                                        <h3 key={uuidv4()}>{tech}</h3>
-                                    )
-                                })}
+                            <div className='project-image-container'>
+                                <img src={project.frontIMG} alt={`${project.title} preview`}/>
                             </div>
-                            <div className='MyWorkbot'>
-                                {project.url && <button id='left' onClick={()=> {
-                                    newTab(project.url)
-                                }}>See Demo</button> }
-                                {project.gitUrl && <button id='right' onClick={()=> {
-                                    newTab(project.gitUrl)
-                                }}>Github Code</button>}
+                            <div className='project-content'>
+                                <h2>{project.title}</h2>
+                                <p>{project.description}</p>
+                                <h3>Technical environment</h3>
+                                <div className='Tech'>
+                                    {project.techs.map(tech => {
+                                        return (
+                                            <h3 key={uuidv4()}>{tech}</h3>
+                                        )
+                                    })}
+                                </div>
+                                <div className='MyWorkbot'>
+                                    {project.url && <button id='left' onClick={()=> {
+                                        newTab(project.url)
+                                    }}>See Demo</button> }
+                                    {project.gitUrl && <button id='right' onClick={()=> {
+                                        newTab(project.gitUrl)
+                                    }}>Github Code</button>}
+                                </div>
                             </div>
                         </ProjetCardStyle>
                     )

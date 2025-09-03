@@ -1,4 +1,4 @@
-import GlobalStyle from "../GlobalStyle";
+
 
 export default function cursorUpdate (page) {
     const mouseCursor = document.querySelector("#cursor");
@@ -7,7 +7,6 @@ export default function cursorUpdate (page) {
     let typeOfNavLink = '';
     let typeOfclick = '';
     if (page === 'HubControl') {
-        console.log('hi im here in hub control');
         if (mouseCursor.classList.contains('PagesCursor')) {
             mouseCursor.classList.remove('PagesCursor');
         }

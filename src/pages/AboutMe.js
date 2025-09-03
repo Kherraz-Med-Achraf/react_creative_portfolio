@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 import { useNavigate } from "react-router-dom";
 import cursorUpdate from "../components/CursorUpdate";
 import {motion, useAnimation} from "framer-motion";
-import GlobalStyle from "../GlobalStyle";
+
 import {
   AboutMeStyle,
   DescriptionStyle,
@@ -26,7 +26,7 @@ import {
     DescriptionAnimation
 } from "../components/AnimationsFramerMotion";
 import Wave from "../components/Wave";
-import CV from '../CV ESGI.pdf'
+import CV from '../Dev Web CDI.pdf'
 import CursorEffect from "../components/CursorEffect";
 
 
@@ -118,31 +118,31 @@ function AboutMe(props) {
                                 typewriter
                                     .typeString(
                                         '<p id="pTypeWriter"> Je m\'appelle KHERRAZ Mohammed Achraf,' +
-                                        ' je suis étudiant à l\'<strong id="ESGI">ESGI</strong> et je suis\n' +
-                                        ' développeur <strong id="special">React !</strong></p>'
+                                        ' étudiant en fin d\'études à l\'<strong id="ESGI">ESGI</strong> et en recherche de <strong id="ESGI">CDI</strong>.' +
+                                        ' Je suis développeur <strong id="special">frontend créatif !</strong></p>'
                                     )
                                     .callFunction(()=>{
                                         ButtonAnimationControl.start('show')
                                     })
                                     .pauseFor(1500)
-                                    .deleteChars(7)
+                                    .deleteChars(18)
                                     .typeString(
-                                        '<p id="pTypeWriter"><strong id="special">JavaScript !</strong></p>'
+                                        '<p id="pTypeWriter"><strong id="special">React !</strong></p>'
                                     )
                                     .pauseFor(1200)
-                                    .deleteChars(12)
+                                    .deleteChars(7)
                                     .typeString(
-                                        '<p id="pTypeWriter"><strong id="special">Node.JS !</strong></p>'
-                                    )
-                                    .pauseFor(1000)
-                                    .deleteChars(9)
-                                    .typeString(
-                                        '<p id="pTypeWriter"><strong id="special">PHP !</strong></p>'
+                                        '<p id="pTypeWriter"><strong id="special">Vue !</strong></p>'
                                     )
                                     .pauseFor(1000)
                                     .deleteChars(5)
                                     .typeString(
-                                        '<p id="pTypeWriter"><strong id="special">Full-Stack !</strong></p>'
+                                        '<p id="pTypeWriter"><strong id="special">Nest !</strong></p>'
+                                    )
+                                    .pauseFor(1000)
+                                    .deleteChars(21)
+                                    .typeString(
+                                        '<p id="pTypeWriter"><strong id="special">votre prochain développeur !</strong></p>'
                                     )
                                     .start()
                             }}

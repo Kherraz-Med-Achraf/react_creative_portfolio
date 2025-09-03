@@ -1,12 +1,12 @@
 {
-  "homepage": "https://kherraz-med-achraf.com",
+  "homepage": "https://kma-dev.fr",
   "name": "react_creative_portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@lottiefiles/lottie-player": "^1.5.7",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
+    "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^6.3.3",
     "parallax-js": "^3.1.0",
